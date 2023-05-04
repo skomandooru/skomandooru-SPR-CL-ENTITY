@@ -6,6 +6,8 @@ import javax.persistence.Id;
 /**
  * This is an example of what a valid ORM Entity would look like. The @Entity annotation informs Spring to relate this
  * class to a database table. The @Id annotation establishes the primary key of the database table.
+ *
+ * No changes need to be made in this class. Check out the Product class.
  */
 @Entity
 public class Sample {

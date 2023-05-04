@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 /**
  * SpringBootApplication main class.
- * Check out the Model class and Repository class for your tasks.
+ * There is no need to change anything in this class. Check out the Model class and Repository class for your tasks.
  */
 @SpringBootApplication
 public class Application {

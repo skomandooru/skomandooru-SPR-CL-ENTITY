@@ -14,6 +14,9 @@ import javax.persistence.Id;
  * need to mark a field, such as productID, with the @Id annotation to establish the primary key of the database
  * table. All other fields of the class will automatically become columns of the database table.
  *
+ * You may oftentimes also see 'Hibernate' mentioned in exceptions & documentations. Hibernate is the name of the
+ * ORM framework that Spring uses to manage your entities.
+ *
  * You can read Spring's own guide to Spring Data JPA & Entities here: https://spring.io/guides/gs/accessing-data-jpa/
  */
 public class Product {
