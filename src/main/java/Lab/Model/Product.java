@@ -2,6 +2,7 @@ package Lab.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Objects;
 
 /**
  * Spring uses Object Relational Mapping to provide an easy way to interact with the database. Most of the time,
@@ -56,6 +57,17 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /*
+    This will override the default equality check with a deep equivalency check.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return productID == product.productID && Objects.equals(name, product.name) && Objects.equals(description, product.description);
     }
 
     @Override
