@@ -2,22 +2,23 @@ package Lab.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Objects;
 
 /**
  * Spring uses Object Relational Mapping to provide an easy way to interact with the database. Most of the time,
  * database tables directly match model classes used in Java. Therefore, it is possible to dynamically generate
- * SQL statements based off of the contents of an Object. Object Relational Mapping will allow us to interact with
- * the database by directly retrieving and manipulating special Objects, now referred to as Entities, without the
- * need for writing SQL statements.
+ * SQL statements based on the contents of an object. Object Relational Mapping will allow us to interact with
+ * the database by directly retrieving and manipulating special objects, called Entities, without the
+ * need to write SQL statements.
  *
  * In order to do that, this class will need to be marked as an Entity using the @Entity annotation. You will also
  * need to mark a field, such as productID, with the @Id annotation to establish the primary key of the database
  * table. All other fields of the class will automatically become columns of the database table.
  *
- * You may oftentimes also see 'Hibernate' mentioned in exceptions & documentations. Hibernate is the name of the
- * ORM framework that Spring uses to manage your entities.
+ * You may often see Hibernate mentioned in exceptions & documentations. Hibernate is the default "ORM provider"
+ * used in Spring Data.
  *
- * You can read Spring's own guide to Spring Data JPA & Entities here: https://spring.io/guides/gs/accessing-data-jpa/
+ * You can read Spring's documentation on Spring Data JPA & Entities here: https://spring.io/guides/gs/accessing-data-jpa/
  */
 public class Product {
     private long productID;
@@ -56,6 +57,17 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /*
+    This will override the default equality check with a deep equivalency check.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return productID == product.productID && Objects.equals(name, product.name) && Objects.equals(description, product.description);
     }
 
     @Override

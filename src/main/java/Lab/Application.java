@@ -25,7 +25,6 @@ public class Application {
      * long errors rather than this nicely formatted output, that most likely means that the Spring beans failed to
      * load, because the JPARepository could not be initialized, because the Product entity was incorrectly set up.
      * Spring errors tend to follow this long cascading pattern.
-     * @param args
      */
     public static void main(String[] args){
         ApplicationContext applicationContext = SpringApplication.run(Application.class);
