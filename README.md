@@ -1,17 +1,18 @@
-# Spring Entity Lab
+# SPR-CL-ENTITY
 
+This coding lab covers unit "Spring Data JPA", module "Spring Data Overview".
 
-## Description
+## Instructions
+- This application shows how we can relate Models in our Spring Application to entities in our database.
+- Look out for TODO statements in Lab.Model.Product to see what needs to be added/changed.
 
-In this lab you'll learn how to annotate an Entity class for Spring Data
+## Shouldn't Modify (But Look at for Context)
+- Lab.Application
+- Models
+    - Lab.Model.Sample
+- Lab.Repository.ProductRepository
+- Lab.Service.ProductService
+- Test files
 
-
-## Where to start
-
-Begin by opening and viewing ./src/main/java/Lab/Model/Product.java which contains instructions. See Sample.java for an example.
-
-Files to edit:
-- Product.java
-
-
-
+## Should Modify
+- Lab.Model.Product

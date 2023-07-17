@@ -20,7 +20,10 @@ import java.util.Objects;
  *
  * You can read Spring's documentation on Spring Data JPA & Entities here: https://spring.io/guides/gs/accessing-data-jpa/
  */
+
+// @TODO - Add an annotation to indicate that this class is mapped to a relation in the database:
 public class Product {
+    // TODO - Add an annotation to indicate that this field is the primary key for the corresponding relation:
     private long productID;
     private String name;
     private String description;
