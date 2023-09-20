@@ -1,6 +1,8 @@
 package Lab.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
@@ -22,8 +24,11 @@ import java.util.Objects;
  */
 
 // @TODO - Add an annotation to indicate that this class is mapped to a relation in the database:
+@Entity
 public class Product {
     // TODO - Add an annotation to indicate that this field is the primary key for the corresponding relation:
+    @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long productID;
     private String name;
     private String description;
